@@ -30,14 +30,39 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+# INSTALLED_APPS = [
+#     'django.contrib.admin',
+#     'django.contrib.auth',
+#     'django.contrib.contenttypes',
+#     'django.contrib.sessions',
+#     'django.contrib.messages',
+#     'django.contrib.staticfiles',
+# ]
+
+
 INSTALLED_APPS = [
+    # Django default apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    # Third-party apps
+    'rest_framework',
+    'django_celery_results',
+    'django_celery_beat',
+    
+    # Your apps
+    'apps.users',
+    'apps.bookings',
+    'apps.payments',
+    'apps.flights',
+    'apps.hotels',
+    'apps.notifications',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
